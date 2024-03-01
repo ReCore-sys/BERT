@@ -3,14 +3,24 @@
     "name": "Simple Chrome Extension Template",
     "description": "A simple Chrome Extension created using a template",
     "version": "0.0.1",
-    "author": "Clyde D'Souza",
+    "action": {},
+    "author": "Kieran Shore",
     "icons": {
-      "16": "icons/icon16.png",
-      "48": "icons/icon48.png",
-      "128": "icons/icon128.png"
+        "16": "icons/icon16.png",
+        "48": "icons/icon48.png",
+        "128": "icons/icon128.png"
     },
-    "chrome_url_overrides" : {
-      "newtab": "newtab.html"
+    "permissions": ["tabs"],
+    "background": {
+        "service_worker": "main.js"
+    },
+    "web_accessible_resources": [
+        {
+            "resources": ["/main-page/dist/assets/*.js"],
+            "extension_ids": ["kindclkdmeikfjkoigehmdnkioaldcfk"]
+        }
+    ],
+    "content_security_policy": {
+        "extension_pages": "script-src 'unsafe-inline'; object-src 'self';"
     }
-  }
-  
+}
