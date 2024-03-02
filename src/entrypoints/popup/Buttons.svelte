@@ -3,7 +3,7 @@
 
 <script lang="ts">
     import { BertState } from "./main";
-
+    export let setbacktoidle: () => void;
     export let state: BertState;
 </script>
 
@@ -12,13 +12,9 @@
         <!--  				  -->
         <!-- Stretch Handling -->
         <!--  				  -->
+
         {#if state == BertState.STRETCH}
-            <div
-                class="button1 button back2idle"
-                on:click={() => {
-                    state = BertState.IDLE;
-                }}
-            >
+            <div class="button1 button back2idle" on:click={setbacktoidle}>
                 <h2>Done</h2>
             </div>
         {:else}
@@ -37,12 +33,7 @@
         <!--  				-->
 
         {#if state == BertState.FOCUS}
-            <div
-                class="button1 button back2idle"
-                on:click={() => {
-                    state = BertState.IDLE;
-                }}
-            >
+            <div class="button1 button back2idle" on:click={setbacktoidle}>
                 <h2>Done</h2>
             </div>
         {:else}
@@ -61,12 +52,7 @@
         <!--  				-->
 
         {#if state == BertState.CALM}
-            <div
-                class="button3 button back2idle"
-                on:click={() => {
-                    state = BertState.IDLE;
-                }}
-            >
+            <div class="button3 button back2idle" on:click={setbacktoidle}>
                 <h2>Done</h2>
             </div>
         {:else}

@@ -79,3 +79,10 @@ button:focus-visible {
         background-color: #f9f9f9;
     }
 }
+
+.logo {
+    width: 300px;
+    height: 300px;
+    will-change: filter;
+    transition: all 0.5s;
+}
