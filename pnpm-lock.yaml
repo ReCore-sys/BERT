@@ -25,6 +25,9 @@ devDependencies:
   svelte-check:
     specifier: ^3.6.2
     version: 3.6.6(svelte@4.2.12)
+  svelte-reactive-css-preprocess:
+    specifier: ^0.0.3
+    version: 0.0.3
   tslib:
     specifier: ^2.6.2
     version: 2.6.2
@@ -3207,6 +3210,17 @@ packages:
       strip-indent: 3.0.0
       svelte: 4.2.12
       typescript: 5.3.3
+    dev: true
+
+  /svelte-reactive-css-preprocess@0.0.3:
+    resolution: {integrity: sha512-XNmPYEzKSO7UKzS7AaRntt16gmyEopGasErxO46wITrkjth+h40FlFtKJWbv9fES9dQgaT/26VtBGrwQ+GBbSg==}
+    dependencies:
+      svelte: 3.59.2
+    dev: true
+
+  /svelte@3.59.2:
+    resolution: {integrity: sha512-vzSyuGr3eEoAtT/A6bmajosJZIUWySzY2CzB3w2pgPvnkUjGqlDnsNnA0PMO+mMAhuyMul6C2uuZzY6ELSkzyA==}
+    engines: {node: '>= 8'}
     dev: true
 
   /svelte@4.2.12:

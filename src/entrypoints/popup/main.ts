@@ -8,6 +8,19 @@ export enum BertState {
     CALM = "CALM",
 }
 
+export function getBertStateText(state: BertState): string {
+    switch (state) {
+        case BertState.IDLE:
+            return "Bert is hanging out";
+        case BertState.FOCUS:
+            return "Bert is focusing";
+        case BertState.STRETCH:
+            return "Bert is stretching";
+        case BertState.CALM:
+            return "Bert is breathing";
+    }
+}
+
 const app = new App({
     target: document.getElementById("app")!,
 });
