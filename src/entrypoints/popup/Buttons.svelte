@@ -64,7 +64,7 @@
 
         {#if state == BertState.CALM}
             <div class="button3 button back2idle" on:click={setbacktoidle}>
-                <h2>Done</h2>
+                <h2>Feeling Good</h2>
             </div>
         {:else}
             <div

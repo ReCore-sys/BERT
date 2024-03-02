@@ -1,4 +1,5 @@
 <script lang="ts">
+    import Calm from "../bertstates/calm.svelte";
     import Focus from "../bertstates/focus.svelte";
     import Idle from "../bertstates/idle.svelte";
     import Stretch from "../bertstates/stretch.svelte";
@@ -42,6 +43,8 @@
                     <Focus />
                 {:else if bertState == BertState.STRETCH}
                     <Stretch />
+                {:else if bertState == BertState.CALM}
+                    <Calm />
                 {/if}
             </div>
             <Buttons bind:state={bertState} {setbacktoidle} />
