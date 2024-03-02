@@ -1,32 +1,30 @@
 <script lang="ts">
-    import BertIdle from "../../assets/Bert_Idle.png";
+    import Idle from "../bertstates/idle.svelte";
     import Buttons from "./Buttons.svelte";
+    import { BertState } from "./main";
+
+    $: bertState = BertState.IDLE;
 </script>
 
 <main>
+    <h1>Bert is currenty doing {bertState}</h1>
     <div class="container">
-        <img src={BertIdle} alt="BERT" class="logo" />
-        <Buttons />
+        <div class="berts_jail">
+            {#if bertState == BertState.IDLE}
+                <Idle />
+            {/if}
+        </div>
+        <Buttons bind:state={bertState} />
     </div>
 </main>
 
 <style>
     .container {
         display: flex;
-        width: 600px;
+        width: 500px;
         height: 400px;
         flex-direction: row;
+        justify-content: space-between;
         align-items: center;
-    }
-
-    .logo {
-        width: 300px;
-        will-change: filter;
-        transition: filter 300ms;
-        transition: all 0.5s;
-    }
-
-    .logo:hover {
-        filter: drop-shadow(0 0 0.75rem aliceblue);
     }
 </style>
