@@ -34,7 +34,7 @@
 
         {#if state == BertState.FOCUS}
             <div class="button1 button back2idle" on:click={setbacktoidle}>
-                <h2>Done</h2>
+                <h2>Done For Now</h2>
             </div>
         {:else}
             <div

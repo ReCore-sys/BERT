@@ -1,6 +1,7 @@
 <script lang="ts">
     import Focus from "../bertstates/focus.svelte";
     import Idle from "../bertstates/idle.svelte";
+    import Stretch from "../bertstates/stretch.svelte";
     import Buttons from "./Buttons.svelte";
     import { BertState, getBertStateText } from "./main";
     import Resourcespage from "./resourcespage.svelte";
@@ -31,7 +32,7 @@
 </script>
 
 <main>
-    {#if !openresources}
+    {#if openresources == false}
         <h1>{berttext}</h1>
         <div class="container">
             <div class="berts_jail">
@@ -39,6 +40,8 @@
                     <Idle />
                 {:else if bertState == BertState.FOCUS}
                     <Focus />
+                {:else if bertState == BertState.STRETCH}
+                    <Stretch />
                 {/if}
             </div>
             <Buttons bind:state={bertState} {setbacktoidle} />
@@ -51,7 +54,7 @@
     <div
         class="resources"
         on:click={() => {
-            openresources = !openresources;
+            openresources = openresources ? false : true;
         }}
     >
         <h2>Resources</h2>

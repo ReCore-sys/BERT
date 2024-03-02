@@ -8,6 +8,9 @@ dependencies:
   animejs:
     specifier: ^3.2.2
     version: 3.2.2
+  svelte-time:
+    specifier: ^0.8.2
+    version: 0.8.2
 
 devDependencies:
   '@sveltejs/vite-plugin-svelte':
@@ -1128,6 +1131,10 @@ packages:
   /cssom@0.5.0:
     resolution: {integrity: sha512-iKuQcq+NdHqlAcwUY0o/HL69XQrUaQdMjmStJ8JFmUaiiQErlhrmuigkg/CU4E2J0IyUKUrMAgl36TvN67MqTw==}
     dev: true
+
+  /dayjs@1.11.10:
+    resolution: {integrity: sha512-vjAczensTgRcqDERK0SR2XMwsF/tSvnvlv6VcF2GIhg6Sx4yOIt/irsr1RDJsKiIyBzJDpCoXiWWq28MqH2cnQ==}
+    dev: false
 
   /debounce@1.2.1:
     resolution: {integrity: sha512-XRRe6Glud4rd/ZGQfiV1ruXSfbvfJedlV9Y6zOlP+2K04vBYiJEte6stfFkCP03aMnY5tsipamumUjL14fofug==}
@@ -3217,6 +3224,12 @@ packages:
     dependencies:
       svelte: 3.59.2
     dev: true
+
+  /svelte-time@0.8.2:
+    resolution: {integrity: sha512-sBLLrWMMInx5iidGlbtlCBAu8CzSixdqOkbhizdalULXBvYMPACp0GtzmyBLEa77hbaMVySZzApIaNG4B4OVmg==}
+    dependencies:
+      dayjs: 1.11.10
+    dev: false
 
   /svelte@3.59.2:
     resolution: {integrity: sha512-vzSyuGr3eEoAtT/A6bmajosJZIUWySzY2CzB3w2pgPvnkUjGqlDnsNnA0PMO+mMAhuyMul6C2uuZzY6ELSkzyA==}
