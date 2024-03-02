@@ -1,8 +1,22 @@
 <script lang="ts">
     // @ts-ignore
-    import Time from "svelte-time/src/Time.svelte";
     import focusgif from "../../assets/focus_ph.gif";
     let timer_start_time = new Date().getTime();
+
+    storage.getItem("local:focusstart").then((value) => {
+        if (value) {
+            timer_start_time = value as number;
+        }
+    });
+
+    storage
+        .setItem("local:focusstart", timer_start_time)
+        .then(() => {
+            console.log("Saved focus start time to storage");
+        })
+        .catch((err) => {
+            console.error("Error saving focus start time to storage", err);
+        });
 
     $: display_time = "00:00:00";
 

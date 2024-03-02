@@ -2,6 +2,7 @@
 <!-- svelte-ignore a11y-no-static-element-interactions -->
 
 <script lang="ts">
+    import { storage } from "wxt/storage";
     import { BertState } from "./main";
     export let setbacktoidle: () => void;
     export let state: BertState;
@@ -33,7 +34,17 @@
         <!--  				-->
 
         {#if state == BertState.FOCUS}
-            <div class="button1 button back2idle" on:click={setbacktoidle}>
+            <div
+                class="button1 button back2idle"
+                on:click={() => {
+                    setbacktoidle();
+                    storage.getItem("local:focusstart").then((value) => {
+                        if (value) {
+                            storage.removeItem("local:focusstart");
+                        }
+                    });
+                }}
+            >
                 <h2>Done For Now</h2>
             </div>
         {:else}
