@@ -5,7 +5,7 @@
 
 <body>
     <img src={stretch} alt="bert" class="logo" />
-    <p>bend until you break!</p>
+    <p>You got this!</p>
 </body>
 
 <style>

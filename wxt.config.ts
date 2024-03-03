@@ -17,5 +17,8 @@ export default defineConfig({
     }),
     manifest: {
         permissions: ["storage"],
+        description: "Bert is here to help you take time for yourself",
+        version: "0.0.1",
+        author: "Kieran Shore",
     },
 });
