@@ -11,7 +11,7 @@ export enum BertState {
 export function getBertStateText(state: BertState): string {
     switch (state) {
         case BertState.IDLE:
-            return "Bert is hanging out";
+            return "What would you like to do?";
         case BertState.FOCUS:
             return "Bert is focusing";
         case BertState.STRETCH:

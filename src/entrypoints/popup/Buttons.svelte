@@ -73,7 +73,7 @@
                     state = BertState.CALM;
                 }}
             >
-                <h2>Calm</h2>
+                <h2>Breathe</h2>
             </div>
         {/if}
     </div>

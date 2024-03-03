@@ -5,7 +5,7 @@
 
 <body>
     <img src={stretch} alt="bert" class="logo" />
-    <p>You got this!</p>
+    <p>Time to stretch!</p>
 </body>
 
 <style>
