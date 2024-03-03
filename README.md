@@ -8,7 +8,7 @@ BERT is a browser extension to help you take time to focus on your wellbeing
 
 ## Enabling B.E.R.T
 
-Hopefully B.E.R.T will have gone through Google's moderation/approval process and be available as an official chrome extension at the time you are reading this. If it has we will make sure that link is available in our repository's readme file, however if not, follow the steps below to get started with B.E.R.T!
+Hopefully B.E.R.T will have gone through Google's moderation/approval process and be available as an official chrome extension at the time you are reading this, however if not, follow the steps below to get started with B.E.R.T!
 
 ### Step 1:
 Download B.E.R.T from the the most recent Release.
